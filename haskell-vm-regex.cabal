@@ -1,0 +1,68 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           haskell-vm-regex
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/haskell-vm-regex#readme>
+homepage:       https://github.com/githubuser/haskell-vm-regex#readme
+bug-reports:    https://github.com/githubuser/haskell-vm-regex/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/haskell-vm-regex
+
+library
+  exposed-modules:
+      Regex
+      VirtualMachine
+  other-modules:
+      Paths_haskell_vm_regex
+  hs-source-dirs:
+      src
+  build-depends:
+      HUnit >=1.6.1.0
+    , base >=4.7 && <5
+    , timeit >=2.0
+  default-language: Haskell2010
+
+executable haskell-vm-regex-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_vm_regex
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HUnit >=1.6.1.0
+    , base >=4.7 && <5
+    , haskell-vm-regex
+    , timeit >=2.0
+  default-language: Haskell2010
+
+test-suite haskell-vm-regex-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Tests
+      Paths_haskell_vm_regex
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HUnit >=1.6.1.0
+    , base >=4.7 && <5
+    , haskell-vm-regex
+    , timeit >=2.0
+  default-language: Haskell2010
