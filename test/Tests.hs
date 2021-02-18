@@ -79,4 +79,4 @@ tests = TestList [TestLabel "Regex tests" regexTests, TestLabel "VM Tests" vmTes
 -- Performance test
 
 bigWord :: String
-bigWord = replicate 1500000 'a' ++ replicate 3000000 'b'
+bigWord = replicate 15000000 'a' ++ replicate 30000000 'b'
