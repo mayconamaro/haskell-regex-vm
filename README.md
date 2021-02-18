@@ -9,3 +9,11 @@ stack test
 
 ## Dependencies
 Stack will manage them, but they are just HUnit and TimeIt, used by the tests.
+
+## Benchmark
+
+Backtrack implementation
+
+String                     | Regex    | Time 
+---------------------------|----------|-------
+45 millions of `a` and `b` | aa\*bb\* | 89.26s
